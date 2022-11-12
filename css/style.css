@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* #rotateBtn {
+    display: none;
+} */
+
+#timeBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    z-index: 10
+}
+
+#timeBox.w {
+    height: 100vw;
+    width: 100vh;
+    transform: translate(-50%, -50%) rotate(90deg);
+    -webkit-transform: translate(-50%, -50%) rotate(90deg)
+}
+
+#timeBox.h {
+    height: 100vh;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%)
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    color: #333;
+    background: #333;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    vertical-align: middle;
+}
+
+input {
+    outline: none;
+    color: #333;
+}
+
+.main {
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+}
+
+.content {
+    min-width: 942px;
+    font-size: 10rem;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.content div {
+    line-height: 1;
+    position: relative;
+    height: 14rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    width: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content span {
+    align-items: center;
+    display: flex;
+    padding-bottom: 2rem;
+}
+
+
+/* .content div::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+} */
+
+menu {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+}
+
+menu a {
+    background: #4c4c4c;
+    margin: 0 3px;
+    color: white;
+    display: flex;
+    font-size: 20px;
+    width: 45px;
+    border-radius: 0 0 10px 10px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidebtns,
+.btns {
+    display: flex;
+    transition: .5s;
+    border-radius: 0 0 10px 10px;
+}
+
+.hidebtns {
+    transform: translateY(-100%);
+}
+
+.open {
+    transform: translateY(0);
+}
+
+.pause {
+    display: none;
+}
+
+footer {
+    font-size: 1.1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+}
+
+footer * {
+    color: white;
+}
+
+
+/* 漂亮主题 */
+
+
+/* body.beautiful::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+} */
+
+body.beautiful {
+    /* background: url(https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/g7/wallhaven-g73l2l.jpg?w=2560&fmt=webp); */
+    background: url(https://cdn.leonus.cn/img/studybg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* body.beautiful .main {
+} */
+
+body.beautiful .main .content div,
+body.beautiful menu a {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 942px) {
+    .content {
+        font-size: 7rem;
+        min-width: 630px;
+    }
+    .content div {
+        height: 10rem;
+        margin: 1rem;
+        width: 10rem;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .main {
+        font-size: 1.1rem;
+    }
+    .content {
+        font-size: 5rem;
+        min-width: 472px;
+    }
+    .content div {
+        height: 7rem;
+        margin: 1rem;
+        width: 7rem;
+    }
+    .content span {
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 472px) {
+    menu {
+        justify-content: center;
+    }
+    .main {
+        font-size: 1rem;
+    }
+    .content {
+        font-size: 3rem;
+        min-width: 320px;
+    }
+    .content div {
+        border-radius: .5rem;
+        height: 5rem;
+        margin: .5rem;
+        width: 5rem;
+    }
+    .content span {
+        padding-bottom: 1rem;
+    }
+    menu a {
+        font-size: 16px;
+        width: 38px;
+        height: 32px;
+        border-radius: 0 0 6px 6px;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}
+
+
+/* @media screen and (orientation: portrait) {
+    .main {
+        -webkit-transform: rotate(90deg);
+        -webkit-transform-origin: 0% 0%;
+        -moz-transform: rotate(90deg);
+        -moz-transform-origin: 0% 0%;
+        -ms-transform: rotate(90deg);
+        -ms-transform-origin: 0% 0%;
+        transform: rotate(90deg);
+        transform-origin: 0% 0%;
+        width: 100vh;
+        height: 100vw;
+        top: 0;
+        left: 100vw;
+    }
+} */
