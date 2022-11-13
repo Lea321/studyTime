@@ -222,7 +222,7 @@ function clearData() {
         localStorage.removeItem('studyStyle')
         localStorage.removeItem('studyText')
         localStorage.removeItem('studyTime')
-        alert("已清除!");
+        alert("清除成功!");
         window.location.reload()
     }
 }
