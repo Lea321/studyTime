@@ -197,7 +197,7 @@ function randomText() {
     document.querySelector('.bottom').innerHTML = textls[Math.floor(Math.random() * textls.length)]
 }
 
-// 改变文本
+// 改文本
 function changeText() {
     PostbirdAlertBox.prompt({
         'title': '<h4 style="margin-bottom:5px;">更改文本</h4>请输入一段文字替换此区域内容，清除文本则恢复随机显示。',
