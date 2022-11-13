@@ -4,43 +4,36 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'DIGITAL';
+    src: url(/font/DIGITAL-Regular.ttf);
+}
+
 html {
+    font-family: 'DIGITAL';
     width: 100%;
     height: 100%;
 }
 
-
-/* #rotateBtn {
-    display: none;
-} */
-
-#timeBox {
-    position: absolute;
+body.w {
     left: 50%;
     top: 50%;
-    overflow: hidden;
-    z-index: 10
-}
-
-#timeBox.w {
     height: 100vw;
     width: 100vh;
     transform: translate(-50%, -50%) rotate(90deg);
     -webkit-transform: translate(-50%, -50%) rotate(90deg)
 }
 
-#timeBox.h {
-    height: 100vh;
-    width: 100vw;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%)
-}
-
 body {
+    position: absolute;
+    overflow: hidden;
+    background: url(https://cdn.leonus.cn/img/studybg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     color: #333;
-    background: #333;
 }
 
 li {
@@ -62,7 +55,7 @@ input {
 }
 
 .main {
-    font-size: 1.3rem;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,20 +65,21 @@ input {
 }
 
 .content {
-    min-width: 942px;
-    font-size: 10rem;
+    margin: 20px 0;
+    min-width: 764px;
+    font-size: 150px;
     display: flex;
     width: 60%;
     justify-content: space-between;
 }
 
 .content div {
-    line-height: 1;
+    background: rgba(0, 0, 0, 0.2);
     position: relative;
-    height: 14rem;
-    margin: 2rem;
-    border-radius: 1rem;
-    width: 14rem;
+    height: 180px;
+    margin: 20px;
+    border-radius: 15px;
+    width: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,17 +88,8 @@ input {
 .content span {
     align-items: center;
     display: flex;
-    padding-bottom: 2rem;
+    padding-bottom: 30px;
 }
-
-
-/* .content div::before {
-    content: '';
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-} */
 
 menu {
     position: fixed;
@@ -115,14 +100,14 @@ menu {
 }
 
 menu a {
-    background: #4c4c4c;
+    background: rgba(0, 0, 0, 0.2);
     margin: 0 3px;
     color: white;
     display: flex;
-    font-size: 20px;
-    width: 45px;
+    font-size: 18px;
+    width: 40px;
     border-radius: 0 0 10px 10px;
-    height: 40px;
+    height: 35px;
     justify-content: center;
     align-items: center;
 }
@@ -146,99 +131,77 @@ menu a {
     display: none;
 }
 
+.bottom {
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 5px;
+    margin: 0 10px;
+}
+
+.today {
+    letter-spacing: 3px;
+}
+
 footer {
-    font-size: 1.1rem;
     position: absolute;
     width: 100%;
     bottom: 10px;
     text-align: center;
 }
 
-footer * {
+#cleerData,
+#hideFooterBtn {
+    cursor: pointer;
+    border: 1px solid #42a5f5;
+    border-radius: 5px;
+    color: #42a5f5;
+    background: none;
+    padding: 3px 8px;
+    transition: .3s;
+}
+
+#cleerData:hover,
+#hideFooterBtn:hover {
+    background-color: #42a5f5;
     color: white;
 }
 
-
-/* 漂亮主题 */
-
-
-/* body.beautiful::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-} */
-
-body.beautiful {
-    /* background: url(https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/g7/wallhaven-g73l2l.jpg?w=2560&fmt=webp); */
-    background: url(https://cdn.leonus.cn/img/studybg.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.footerHide {
+    display: none;
 }
 
-
-/* body.beautiful .main {
-} */
-
-body.beautiful .main .content div,
-body.beautiful menu a {
-    background: rgba(0, 0, 0, 0.2);
+footer * {
+    letter-spacing: 2px;
+    color: white;
 }
 
-@media screen and (max-width: 942px) {
+@media screen and (max-width: 800px) {
     .content {
-        font-size: 7rem;
-        min-width: 630px;
+        font-size: 120px;
+        min-width: 573px;
     }
     .content div {
-        height: 10rem;
-        margin: 1rem;
-        width: 10rem;
+        height: 150px;
+        margin: 15px;
+        width: 150px;
     }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 615px) {
     .main {
-        font-size: 1.1rem;
+        font-size: 16px;
     }
     .content {
-        font-size: 5rem;
-        min-width: 472px;
+        font-size: 90px;
+        min-width: 415px;
     }
     .content div {
-        height: 7rem;
-        margin: 1rem;
-        width: 7rem;
+        height: 110px;
+        margin: 10px;
+        width: 110px;
     }
     .content span {
-        padding-bottom: 1rem;
-    }
-}
-
-@media screen and (max-width: 472px) {
-    menu {
-        justify-content: center;
-    }
-    .main {
-        font-size: 1rem;
-    }
-    .content {
-        font-size: 3rem;
-        min-width: 320px;
-    }
-    .content div {
-        border-radius: .5rem;
-        height: 5rem;
-        margin: .5rem;
-        width: 5rem;
-    }
-    .content span {
-        padding-bottom: 1rem;
+        padding-bottom: 15px;
     }
     menu a {
         font-size: 16px;
@@ -246,25 +209,27 @@ body.beautiful menu a {
         height: 32px;
         border-radius: 0 0 6px 6px;
     }
-    footer {
-        font-size: 1rem;
-    }
 }
 
-
-/* @media screen and (orientation: portrait) {
-    .main {
-        -webkit-transform: rotate(90deg);
-        -webkit-transform-origin: 0% 0%;
-        -moz-transform: rotate(90deg);
-        -moz-transform-origin: 0% 0%;
-        -ms-transform: rotate(90deg);
-        -ms-transform-origin: 0% 0%;
-        transform: rotate(90deg);
-        transform-origin: 0% 0%;
-        width: 100vh;
-        height: 100vw;
+@media screen and (max-width: 432px) {
+    .w .postbird-box-content {
         top: 0;
-        left: 100vw;
+        transform: translate(-50%, 10%);
+        margin-top: 0;
     }
-} */
+    menu {
+        justify-content: center;
+    }
+    .content {
+        width: 100%;
+        font-size: 70px;
+        max-width: 432px;
+        min-width: unset;
+    }
+    .content div {
+        border-radius: 8px;
+        height: 85px;
+        margin: 10px;
+        width: 85px;
+    }
+}

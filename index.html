@@ -16,42 +16,40 @@
 </head>
 
 <body>
-    <div id="timeBox" class="h">
-        <menu>
-            <div class="btns">
-                <a href="javascript:;" id="menuBtn" onclick="toggleMenu()"><i class="fa-solid fa-gear"></i></a>
-                <div class="hidebtns">
-                    <a title="切换背景" href="javascript:;" class="btn" onclick="changeBg()"><i
-                            class="fa-solid fa-shirt"></i></a>
-                    <a title="时间回溯" href="javascript:;" class="btn" onclick="subTime()"><i
-                            class="fa-solid fa-rotate-left"></i></a>
-                    <!-- <a title="音效切换" href="javascript:;" class="btn"><i class="fa-solid fa-volume-xmark"></i></a> -->
-                    <a title="全屏切换" href="javascript:;" class="btn" id="fullBtn" onclick="toggleFull()"><i
-                            class="fa-solid fa-expand"></i></a>
-                    <a title="屏幕旋转" href="javascript:;" class="btn" onclick="rotate()"><i
-                            class="fa-solid fa-rotate"></i></a>
-                    <a title="问题解答" href="javascript:;" class="btn" onclick="question()"><i
-                            class="fa-regular fa-circle-question"></i></a>
-                </div>
+    <menu>
+        <div class="btns">
+            <a href="javascript:;" id="menuBtn" onclick="toggleMenu()"><i class="fa-solid fa-gear"></i></a>
+            <div class="hidebtns">
+                <!-- <a title="切换背景" href="javascript:;" class="btn" onclick="changeBg()"><i
+                        class="fa-solid fa-shirt"></i></a> -->
+                <a title="时间回溯" href="javascript:;" class="btn" onclick="subTime()"><i
+                        class="fa-solid fa-rotate-left"></i></a>
+                <!-- <a title="音效切换" href="javascript:;" class="btn"><i class="fa-solid fa-volume-xmark"></i></a> -->
+                <a title="全屏切换" href="javascript:;" class="btn" id="fullBtn" onclick="toggleFull()"><i
+                        class="fa-solid fa-expand"></i></a>
+                <a title="屏幕旋转" href="javascript:;" class="btn" onclick="document.body.classList.toggle('w')"><i
+                        class="fa-solid fa-rotate"></i></a>
+                <a title="问题解答" href="javascript:;" class="btn" onclick="question()"><i
+                        class="fa-regular fa-circle-question"></i></a>
             </div>
-            <a title="开始" href="javascript:;" class="btn start" onclick="begin()"><i class="fa-solid fa-play"></i></a>
-            <a title="暂停" href="javascript:;" class="btn pause" onclick="pause()"><i class="fa-solid fa-pause"></i></a>
-        </menu>
-        <div class="main">
-            <div class="top">
-                <div class="today"></div>
-            </div>
-            <div class="content">
-                <div class="hour">00</div><span>:</span>
-                <div class="minute">00</div><span>:</span>
-                <div class="second">00</div>
-            </div>
-            <div class="bottom">你要悄悄拔尖，然后惊艳所有人！</div>
         </div>
-        <footer>
-            <span>©2022 - 2022 By <a href="https://www.leonus.cn/">Leonus</a></span>
-        </footer>
+        <a title="开始" href="javascript:;" class="btn start" onclick="begin()"><i class="fa-solid fa-play"></i></a>
+        <a title="暂停" href="javascript:;" class="btn pause" onclick="pause()"><i class="fa-solid fa-pause"></i></a>
+    </menu>
+    <div class="main">
+        <div class="top">
+            <div class="today"></div>
+        </div>
+        <div class="content">
+            <div class="hour">00</div><span>:</span>
+            <div class="minute">00</div><span>:</span>
+            <div class="second">00</div>
+        </div>
+        <div class="bottom" onclick="changeText()">你要悄悄拔尖，然后惊艳所有人！</div>
     </div>
+    <footer>
+        <p>©2022 By <a href="https://www.leonus.cn/">Leonus</a></p>
+    </footer>
 </body>
 
 </html>
